@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Script displays the occurence number ip and http code in list format
+
+myfile="apache-access.log"
+awk -F' ' '{ print $1, $9}' $myfile | sort | uniq -c|sort -nr
